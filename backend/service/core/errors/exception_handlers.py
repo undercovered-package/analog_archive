@@ -179,7 +179,7 @@ def add_exception_handlers(app: FastAPI) -> None:
     app.add_exception_handler(HTTPException, http_exception_error_handler)  # type: ignore
     app.add_exception_handler(ValidationError, validation_exception_handler)  # type: ignore
     app.add_exception_handler(RequestValidationError, validation_exception_handler)  # type: ignore
-    # app.add_exception_handler(ExpiredSignatureError, jwt_expired_exception_handler)
-    # app.add_exception_handler(PyJWTError, jwt_invalid_exception_handler)
+    # service.add_exception_handler(ExpiredSignatureError, jwt_expired_exception_handler)
+    # service.add_exception_handler(PyJWTError, jwt_invalid_exception_handler)
     app.add_exception_handler(AppException, app_exception_handler)  # type: ignore
     app.add_exception_handler(Exception, default_error_handler)  # type: ignore
