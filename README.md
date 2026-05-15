@@ -150,7 +150,7 @@ pip install -r requirements.txt
 cp .env.example .env
 
 # Run (requires a running Postgres instance)
-uvicorn app.main:app --reload
+uvicorn service.main:service --reload
 ```
 
 ### Frontend

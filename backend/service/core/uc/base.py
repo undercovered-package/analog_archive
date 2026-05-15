@@ -25,7 +25,7 @@ class UCResponse(BaseModel):
 
     @property
     def first_error(self) -> tp.Optional["BaseUCError"]:
-        if self:
+        if not self.has_errors():
             return None
         return self.errors[0]
 

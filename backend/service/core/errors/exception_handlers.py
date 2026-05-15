@@ -5,8 +5,8 @@ import typing as tp
 
 import orjson
 import sentry_sdk
-from enterprise_core.main import settings
-from enterprise_core.main.errors.errors import AppException
+from service.config import settings
+from service.core.errors.errors import AppException
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse

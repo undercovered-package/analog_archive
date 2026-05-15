@@ -1,12 +1,12 @@
 from contextlib import asynccontextmanager
 
-from app.config import settings, TORTOISE_ORM
-from app.routers import health, items
+from service.config import settings, TORTOISE_ORM
+from service.api.routers import health, items
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from tortoise.contrib.fastapi import RegisterTortoise
 
-from backend.service.core.errors.exception_handlers import add_exception_handlers
+from service.core.errors.exception_handlers import add_exception_handlers
 
 
 @asynccontextmanager
