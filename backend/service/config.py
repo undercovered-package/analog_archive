@@ -5,6 +5,7 @@ class Settings(BaseSettings):
     DATABASE_URL: str = "postgres://postgres:postgres@localhost:5432/darkroom"
     APP_NAME: str = "Darkroom API"
     DEBUG: bool = False
+    ENVIRONMENT: str = "development"
 
     model_config = {"env_file": ".env"}
 
@@ -15,7 +16,7 @@ TORTOISE_ORM = {
     "connections": {"default": settings.DATABASE_URL},
     "apps": {
         "models": {
-            "models": ["service.models.item", "aerich.models"],
+            "models": ["service.core.models.item", "aerich.models"],
             "default_connection": "default",
         }
     },
